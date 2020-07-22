@@ -17,9 +17,9 @@ public class TestPersonne {
 		PersonneService personneService = context.getBean("personneService", PersonneService.class);
 
 		Personne personne = new Personne();
-		personne.setLogin("testlogin123");
-		personne.setMdp("123456");
-		personne.setEmail("testlogin@afpa.fr");
+		personne.setLogin("Jeanne");
+		personne.setMdp("Eleou");
+		personne.setEmail("jeanne.eleou@afpa.fr");
 
 		personneService.addPersonne(personne);
 	}

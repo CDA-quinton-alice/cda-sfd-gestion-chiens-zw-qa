@@ -17,7 +17,6 @@ use gestion_chiens;
 CREATE USER if not EXISTS'user_gestion_chiens'@'localhost' IDENTIFIED BY 'pwd';
 grant all privileges on gestion_chiens.* to 'user_gestion_chiens'@'localhost';
 FLUSH PRIVILEGES;
-
 #------------------------------------------------------------
 #        Création de la table personne 
 #------------------------------------------------------------
@@ -49,9 +48,9 @@ idChien int primary key auto_increment,
 #        Création de la table personne_chien
 #------------------------------------------------------------
 create table personne_chien(
-	id_personne INT,
-   id_chien INT,
-   PRIMARY KEY(id_personne, id_chien),
-   FOREIGN KEY(id_personne) REFERENCES Personne(id_personne),
-   FOREIGN KEY(id_chien) REFERENCES Chien(id_chien)
+	idPersonne INT,
+   idChien INT,
+   PRIMARY KEY(idPersonne, idChien),
+   FOREIGN KEY(idPersonne) REFERENCES Personne(idPersonne),
+   FOREIGN KEY(idChien) REFERENCES Chien(idChien)
 )ENGINE=InnoDB;
