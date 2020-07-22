@@ -3,8 +3,6 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<meta name="viewport"
-	content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>index</title>
 <link type="text/css" rel="stylesheet" href="static/css/style.css">
 <link rel="stylesheet"
@@ -32,12 +30,11 @@
 					</button>
 					<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 						<div class="navbar-nav">
-							<a class="nav-item nav-link active" href="pages/index.jsp">Home
-								<span class="sr-only">(current)</span></a> 
-							<a class="nav-item nav-link" href="pages/login.jsp">Login</a>
-							<a class="nav-item nav-link" href="pages/regist.jsp">Regist</a>
-							<a class="nav-item nav-link" href="pages/list.jsp">List</a>
-							<a class="nav-item nav-link" href="pages/manager.jsp">Gestion</a>
+							<a class="nav-item nav-link active" href="pages/user/login.jsp">Login
+								<span class="sr-only">(current)</span>
+							</a> <a class="nav-item nav-link" href="pages/user/regist.jsp">Regist</a>
+							<a class="nav-item nav-link" href="pages/cart/cart.jsp">List</a>
+							<a class="nav-item nav-link" href="ages/manager/manager.jsp">Gestion</a>
 						</div>
 					</div>
 				</nav>
@@ -57,16 +54,13 @@
 					</ol>
 					<div class="carousel-inner">
 						<div class="carousel-item active">
-							<img src="static/img/default.png" class="d-block w-100"
-								alt="slide homepage 1">
+							<img src="default.png" class="d-block w-100" alt="img homepage">
 						</div>
 						<div class="carousel-item">
-							<img src="static/img/slide2.jpg" class="d-block w-100"
-								alt="slide homepage 2">
+							<img src="default.png" class="d-block w-100" alt="img homepage">
 						</div>
 						<div class="carousel-item">
-							<img src="static/img/slide3.jpg" class="d-block w-100"
-								alt="slide homepage 3">
+							<img src="default.png" class="d-block w-100" alt="img homepage">
 						</div>
 					</div>
 					<a class="carousel-control-prev" href="link" role="button"
@@ -78,26 +72,12 @@
 						class="sr-only">Next</span>
 					</a>
 				</div>
+				<div class="col-sm-2"></div>
 
 			</div>
-			<div class="col-sm-2"></div>
 
 		</div>
 	</div>
-
-	<!-- Optional JavaScript -->
-	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-		crossorigin="anonymous"></script>
-	<script
-		src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-		crossorigin="anonymous"></script>
-	<script
-		src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-		integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-		crossorigin="anonymous"></script>
 
 </body>
 </html>
