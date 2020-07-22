@@ -17,7 +17,6 @@ use gestion_chiens;
 CREATE USER if not EXISTS'user_gestion_chiens'@'localhost' IDENTIFIED BY 'pwd';
 grant all privileges on gestion_chiens.* to 'user_gestion_chiens'@'localhost';
 FLUSH PRIVILEGES;
-
 #------------------------------------------------------------
 #        Création de la table personne 
 #------------------------------------------------------------

@@ -49,9 +49,9 @@ idChien int primary key auto_increment,
 #        Création de la table personne_chien
 #------------------------------------------------------------
 create table personne_chien(
-	idPersonne INT,
-   idChien INT,
-   PRIMARY KEY(idPersonne, idChien),
-   FOREIGN KEY(idPersonne) REFERENCES Personne(idPersonne),
-   FOREIGN KEY(idChien) REFERENCES Chien(idChien)
+	id_personne INT,
+   id_chien INT,
+   PRIMARY KEY(id_personne, id_chien),
+   FOREIGN KEY(id_personne) REFERENCES Personne(id_personne),
+   FOREIGN KEY(id_chien) REFERENCES Chien(id_chien)
 )ENGINE=InnoDB;
