@@ -18,14 +18,14 @@ public class PersonneDaoImpl implements PersonneDao {
 
 	@Override
 	public void add(Personne personne) {
-		String sql = "insert into personne(`login`,`password`,`email`) values(?,?,?)";
+		String sql = "insert into personne(login,mdp,email) values(?,?,?)";
 		int update = jdbcTemplet.update(sql, personne.getLogin(), personne.getMdp(), personne.getEmail());
 		System.out.println(update);
 	}
 
 	@Override
 	public void update(Personne personne) {
-		String sql = "update personne set login=?, password=?, email=? where id=?";
+		String sql = "update personne set login=?, mdp=?, email=? where idPersonne=?";
 		int update = jdbcTemplet.update(sql, personne.getLogin(), personne.getMdp(), personne.getEmail(),
 				personne.getIdPersonne());
 		System.out.println(update);
@@ -33,7 +33,7 @@ public class PersonneDaoImpl implements PersonneDao {
 
 	@Override
 	public void delete(int id) {
-		String sql = "delete from personne where id=?";
+		String sql = "delete from personne where idPersonne=?";
 		int update = jdbcTemplet.update(sql, id);
 		System.out.println(update);
 
@@ -48,7 +48,7 @@ public class PersonneDaoImpl implements PersonneDao {
 
 	@Override
 	public Personne find(int id) {
-		String sql = "select * from personne where id=?";
+		String sql = "select * from personne where idPersonne=?";
 		Personne personne = jdbcTemplet.queryForObject(sql, new BeanPropertyRowMapper<Personne>(Personne.class), id);
 		return personne;
 	}
