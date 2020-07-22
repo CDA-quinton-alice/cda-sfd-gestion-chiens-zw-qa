@@ -49,7 +49,7 @@ idChien int primary key auto_increment,
 #        Création de la table personne_chien
 #------------------------------------------------------------
 create table personne_chien(
-	idPpersonne INT,
+	idPersonne INT,
    idChien INT,
    PRIMARY KEY(idPersonne, idChien),
    FOREIGN KEY(idPersonne) REFERENCES Personne(idPersonne),
