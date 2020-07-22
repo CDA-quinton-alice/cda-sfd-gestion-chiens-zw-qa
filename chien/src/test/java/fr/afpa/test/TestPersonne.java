@@ -11,41 +11,40 @@ import fr.afpa.service.PersonneService;
 
 public class TestPersonne {
 
-//	@Test
-//	public void testAddPersonne() {
-//		ApplicationContext context = new ClassPathXmlApplicationContext("bean.xml");
-//		PersonneService personneService = context.getBean("personneService", PersonneService.class);
-//	
-//		Personne personne = new Personne();
-//		personne.setLogin("testlogin3");
-//		personne.setPassword("123");
-//		personne.setEmail("test@afpa.fr");
-//
-//		personneService.addPersonne(personne);
-//	}
+	@Test
+	public void testAddPersonne() {
+		ApplicationContext context = new ClassPathXmlApplicationContext("bean.xml");
+		PersonneService personneService = context.getBean("personneService", PersonneService.class);
 
-//	@Test
-//	public void testUpdatePersonne() {
-//		ApplicationContext context = new ClassPathXmlApplicationContext("bean.xml");
-//		PersonneService personneService = context.getBean("personneService", PersonneService.class);
-//
-//		Personne personne = new Personne();
-//		personne.setId(2);
-//		personne.setLogin("testlogin");
-//		// update password
-//		personne.setPassword("123456");
-//		personne.setEmail("test@afpa.fr");
-//
-//		personneService.updatePersonne(personne);
-//	}
+		Personne personne = new Personne();
+		personne.setLogin("testlogin123");
+		personne.setMdp("123456");
+		personne.setEmail("testlogin@afpa.fr");
 
-//	@Test
-//	public void testDeletePersonne() {
-//		ApplicationContext context = new ClassPathXmlApplicationContext("bean.xml");
-//		PersonneService personneService = context.getBean("personneService", PersonneService.class);
-//
-//		personneService.deletePersonne(2);
-//	}
+		personneService.addPersonne(personne);
+	}
+
+	@Test
+	public void testUpdatePersonne() {
+		ApplicationContext context = new ClassPathXmlApplicationContext("bean.xml");
+		PersonneService personneService = context.getBean("personneService", PersonneService.class);
+
+		Personne personne = new Personne();
+		personne.setIdPersonne(2);
+		personne.setLogin("testlogin");
+		personne.setMdp("123456");
+		personne.setEmail("test@afpa.fr");
+
+		personneService.updatePersonne(personne);
+	}
+
+	@Test
+	public void testDeletePersonne() {
+		ApplicationContext context = new ClassPathXmlApplicationContext("bean.xml");
+		PersonneService personneService = context.getBean("personneService", PersonneService.class);
+
+		personneService.deletePersonne(2);
+	}
 
 	@Test
 	public void testSelectCount() {
