@@ -27,6 +27,11 @@
     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
     <small id="emailHelp" class="form-text text-muted"> Bien entendu, nous préférons toujours vous rappeler que nous ne le partageons avec quinconque sans votre accord.</small>
   </div>
+   <div class="form-group">
+    <label for="exampleInputEmail1">identifiant</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <small id="emailHelp" class="form-text text-muted"> Chez Wouf, nous privilégions la double sécurité pour l'identification ! </small>
+  </div>
   <div class="form-group">
     <label for="exampleInputPassword1">mot de passe</label>
     <input type="password" class="form-control" id="exampleInputPassword1">
@@ -41,7 +46,7 @@
 <br>
     <button type="submit" class="btn btn-success">s'inscrire à Wouf</button>
     <br>
-  
+
 </form>
 </div>
 </body>
