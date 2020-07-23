@@ -199,13 +199,21 @@
 			<version>5.2.7.RELEASE</version>
 		</dependency>
 
+		<!-- The Legion of the Bouncy Castle -->
+<dependency>
+	<groupId>org.bouncycastle</groupId>
+	<artifactId>bcprov-jdk16</artifactId>
+	<version>1.46</version>
+</dependency>
+
+
 	</dependencies>
 
 
 	<build>
 		<finalName>chien</finalName>
 
-		<pluginManagement><!-- lock down plugins versions to avoid using Maven 
+		<pluginManagement><!-- lock down plugins versions to avoid using Maven
 				defaults (may be moved to parent pom) -->
 			<plugins>
 				<plugin>
