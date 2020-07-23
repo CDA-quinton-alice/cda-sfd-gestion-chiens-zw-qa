@@ -11,9 +11,19 @@
   	<description></description>
   	<servlet-class>fr.afpa.web.BaseServlet</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>Identification</servlet-name>
+  	<display-name>Identification</display-name>
+  	<description></description>
+  	<servlet-class>fr.afpa.controleur.Identification</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>BaseServlet</servlet-name>
   	<url-pattern>/BaseServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Identification</servlet-name>
+  	<url-pattern>/Identification</url-pattern>
   </servlet-mapping>
 </web-app>
 
