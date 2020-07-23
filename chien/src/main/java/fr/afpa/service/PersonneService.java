@@ -38,4 +38,11 @@ public class PersonneService {
 		return personneDao.findAll();
 	}
 
+	public boolean existsUsername(String username) {
+		if (personneDao.find(username) == null) {
+			return false;
+		}
+		return true;
+	}
+
 }

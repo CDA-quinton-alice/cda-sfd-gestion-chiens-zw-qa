@@ -21,15 +21,7 @@
 
 	<div class="container-fluid">
 		<div class="row">
-			<div class="col-sm-8">
-				<div class="login_banner">
-
-					<div id="l_content">
-						<h1 class="login_word">Welcome to register!</h1>
-					</div>
-				</div>
-
-			</div>
+			<div class="col-sm-4"></div>
 			<div class="col-sm-4">
 
 				<div id="content">
@@ -40,26 +32,27 @@
 								<span class="errorMsg"> ${ requestScope.msg } </span>
 							</div>
 							<div class="form">
-								<form>
-									<div class="form-group">
-										<label for="exampleInputEmail1">Email address</label> <input
-											type="email" class="form-control" id="exampleInputEmail1"
-											aria-describedby="emailHelp"> <small id="emailHelp"
-											class="form-text text-muted">We'll never share your
-											email with anyone else.</small>
-									</div>
-									<div class="form-group">
-										<label for="exampleInputPassword1">Password</label> <input
-											type="password" class="form-control"
-											id="exampleInputPassword1">
-									</div>
-									<div class="form-group">
-										<label for="exampleInputPassword1">Confirm password</label> <input
-											type="password" class="form-control"
-											id="exampleInputPassword2">
-									</div>
-
-									<button type="submit" class="btn btn-primary">Submit</button>
+								<form action="RegistServlet" method="post">
+									<input type="hidden" name="action" value="regist"> 
+									
+									<label>Login: </label> 
+									<input class="itxt" type="text" placeholder="Login"
+										value="${requestScope.username}" autocomplete="off"
+										tabindex="1" name="username" id="username" /> <br /> <br />
+										
+									<label>Password: </label> 
+									<input class="itxt" type="password"
+										placeholder="Password" autocomplete="off" tabindex="1"
+										name="password" id="password" /> <br /> <br /> 
+									<label>Confirm password: </label> 
+									<input class="itxt" type="password"
+										placeholder="Confirm password" autocomplete="off" tabindex="1"
+										name="repwd" id="repwd" /> <br /> <br /> 
+									<label>Email: </label> 
+									<input class="itxt" type="text" placeholder="Email"
+										value="${requestScope.email}" autocomplete="off" tabindex="1"
+										name="email" id="email" /> <br /> <br /> 
+									<input type="submit" value="Regist" id="sub_btn" />
 								</form>
 							</div>
 
@@ -67,6 +60,7 @@
 					</div>
 				</div>
 			</div>
+			<div class="col-sm-4"></div>
 		</div>
 	</div>
 </body>
