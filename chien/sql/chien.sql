@@ -1,16 +1,13 @@
 #------------------------------------------------------------
 #        Script MySQL projet cda-sfd-gestion-chiens-zw-qa
 #------------------------------------------------------------
-
 #------------------------------------------------------------
 #        Création de la base de données gestion_chiens
 #------------------------------------------------------------
-
 DROP DATABASE IF EXISTS gestion_chiens;
 CREATE DATABASE IF NOT EXISTS gestion_chiens; 
 alter database gestion_chiens character set utf8 collate utf8_general_ci;
 use gestion_chiens;
-
 #-----------------------------------------------------------------------------------------------------
 #        Creation de l'utilisateur dédié à la base de données gestion_chiens : user_gestion_chiens
 #-----------------------------------------------------------------------------------------------------
@@ -20,26 +17,32 @@ FLUSH PRIVILEGES;
 #------------------------------------------------------------
 #        Création de la table personne 
 #------------------------------------------------------------
-
 create table personne(
-	`id` int primary key auto_increment,
-	`login` varchar(20) not null unique,
-	`password` varchar(32) not null,
-	`email` varchar(200)
+	idPersonne int primary key auto_increment,
+	username varchar(20) not null unique,
+	pwd varchar(32) not null,
+	email varchar(200) not null unique
 ) ENGINE = InnoDB;
-insert into personne(`login`,`password`,`email`) values('admin','admin','admin@gmail.com');
+insert into personne(`username`,`pwd`,`email`) values('admin','admin','admin@gmail.com');
 select * from personne;
-
 #------------------------------------------------------------
 #        Création de la table chien
 #------------------------------------------------------------
-
-
 create table chien(
-	`id` int primary key auto_increment,	
-	`puce` int not null,
-	`nom` varchar(100) not null,
-	`couleur` varchar(100) not null,
-	`age` int not null,
-	`img_path` varchar(200) not null
+	idChien int primary key auto_increment,	
+	puce int not null,
+	nom varchar(100) not null,
+	couleur varchar(100) not null,
+	age int not null,
+	imgPath varchar(200)
 )	ENGINE = InnoDB;
+#------------------------------------------------------------
+#        Création de la table personne_chien
+#------------------------------------------------------------
+create table personne_chien(
+idPersonne INT,
+  idChien INT,
+  PRIMARY KEY(idPersonne, idChien),
+  FOREIGN KEY(idPersonne) REFERENCES Personne(idPersonne),
+  FOREIGN KEY(idChien) REFERENCES Chien(idChien)
+)ENGINE=InnoDB;
