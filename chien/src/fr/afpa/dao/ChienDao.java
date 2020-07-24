@@ -16,12 +16,4 @@ public interface ChienDao {
 
 	public List<Chien> queryChiens();
 
-//    Integer queryForPageTotalCount();
-//
-//    List<Chien> queryForPageItems(int begin, int pageSize);
-//
-//    Integer queryForPageTotalCountByPrice(int min, int max);
-//
-//    List<Chien> queryForPageItemsByPrice(int begin, int pageSize, int min, int max);
-
 }

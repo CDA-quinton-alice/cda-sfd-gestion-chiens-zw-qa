@@ -6,7 +6,6 @@ import fr.afpa.dao.ChienDao;
 import fr.afpa.pojo.Chien;
 
 public class ChienDaoImpl extends BaseDao implements ChienDao {
-
 	@Override
 	public int addChien(Chien chien) {
 		String sql = "insert into chien(puce,nom,couleur,age,imgPath) values(?,?,?,?,?)";
@@ -15,7 +14,7 @@ public class ChienDaoImpl extends BaseDao implements ChienDao {
 
 	@Override
 	public int deleteChienById(Integer id) {
-		String sql = "delete from chien where id = ?";
+		String sql = "delete from chien where idChien = ?";
 		return update(sql, id);
 	}
 
@@ -34,7 +33,7 @@ public class ChienDaoImpl extends BaseDao implements ChienDao {
 
 	@Override
 	public List<Chien> queryChiens() {
-		String sql = "select idChien,puce,nom,couleur,age, imgPath from chien";
+		String sql = "select idChien,nom,puce,couleur,age, imgPath from chien";
 		return queryForList(Chien.class, sql);
 	}
 

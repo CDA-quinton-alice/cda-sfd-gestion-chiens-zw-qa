@@ -35,6 +35,7 @@ public class UserServlet extends HttpServlet {
 			req.setAttribute("username", username);
 			req.getRequestDispatcher("/pages/login.jsp").forward(req, resp);
 		} else {
+			req.getSession().setAttribute("user", loginUser);
 			req.getRequestDispatcher("/pages/regist_success.jsp").forward(req, resp);
 		}
 	}

@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,7 +16,6 @@
 %>
 
 <base href="<%=basePath%>">
-<link type="text/css" rel="stylesheet" href="static/css/style.css">
 <script type="text/javascript" src="static/script/jquery-1.7.2.js"></script>
 <script type="text/javascript">
 	$(function() {
@@ -48,38 +48,44 @@
 			</button>
 			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 				<div class="navbar-nav">
-					<a class="nav-item nav-link" href="../index.jsp">Home </a> <a
-						class="nav-item nav-link" href="../index.jsp">My dog(s)</a> <a
-						class="nav-item nav-link" href="../index.jsp">Log out</a>
+					<a class="nav-item nav-link" href="./index.jsp">Home </a> <a
+						class="nav-item nav-link" href="./index.jsp">My dog(s)</a> <a
+						class="nav-item nav-link" href="./index.jsp">Log out</a>
 				</div>
 			</div>
 		</nav>
 
-		<div id="main">
-			<table>
+		<table class="table">
+			<thead>
 				<tr>
-					<td>Name</td>
-					<td>No. chip</td>
-					<td>Color</td>
-					<td>Age</td>
-					<td>Photo</td>
-					<td colspan="2">Action</td>
+					<th scope="col">#</th>
+					<th scope="col">Name</th>
+					<th scope="col">No. Chip</th>
+					<th scope="col">Color</th>
+					<th scope="col">Age</th>
+					<th scope="col">Photo</th>
+					<th scope="col" colspan="2">Action</th>
 				</tr>
+			</thead>
 
-				<c:forEach items="${requestScope.page.items}" var="dog">
+			<c:forEach items="${requestScope.chiens}" var="chien">
+
+				<tbody>
 					<tr>
-						<td>${book.name}</td>
-						<td>${book.price}</td>
-						<td>${book.author}</td>
-						<td>${book.sales}</td>
-						<td>${book.stock}</td>
+						<th scope="row">${chien.idChien}</th>
+						<td>${chien.nom}</td>
+						<td>${chien.puce}</td>
+						<td>${chien.couleur}</td>
+						<td>${chien.age}</td>
+						<td>${chien.imgPath}</td>
 						<td><a
-							href="manager/bookServlet?action=getBook&id=${book.id}&pageNo=${requestScope.page.pageNo}">Update</a></td>
+							href="UpdateServlet?idChien=${chien.idChien}">Update</a></td>
 						<td><a class="deleteClass"
-							href="manager/bookServlet?action=delete&id=${book.id}&pageNo=${requestScope.page.pageNo}">Delete</a></td>
+							href="DeleteServlet?idChien=${chien.idChien}">Delete</a></td>
 					</tr>
-				</c:forEach>
-
+				</tbody>
+			</c:forEach>
+			<tbody>
 				<tr>
 					<td></td>
 					<td></td>
@@ -87,10 +93,18 @@
 					<td></td>
 					<td></td>
 					<td></td>
+					<td><a
+						href="pages/new_dog.jsp">Add new dog</a></td>
 				</tr>
-			</table>
 
-		</div>
+			</tbody>
+
+		</table>
+
+
+
+
+
 	</div>
 </body>
 </html>
