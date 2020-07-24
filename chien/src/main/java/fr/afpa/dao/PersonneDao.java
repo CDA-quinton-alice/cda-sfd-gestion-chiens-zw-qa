@@ -18,4 +18,6 @@ public interface PersonneDao {
 
 	public List<Personne> findAll();
 
+	public Personne find(String login);
+
 }

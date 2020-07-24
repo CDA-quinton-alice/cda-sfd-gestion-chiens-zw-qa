@@ -60,4 +60,11 @@ public class PersonneDaoImpl implements PersonneDao {
 		return list;
 	}
 
+	@Override
+	public Personne find(String login) {
+		String sql = "select * from personne where login=?";
+		Personne personne = jdbcTemplet.queryForObject(sql, new BeanPropertyRowMapper<Personne>(Personne.class), login);
+		return personne;
+	}
+
 }

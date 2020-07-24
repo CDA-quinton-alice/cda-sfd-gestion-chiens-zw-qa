@@ -7,10 +7,10 @@
   <display-name>Archetype Created Web Application</display-name>
 
   <servlet>
-  	<servlet-name>BaseServlet</servlet-name>
-  	<display-name>BaseServlet</display-name>
+  	<servlet-name>RegistServlet</servlet-name>
+  	<display-name>RegistServlet</display-name>
   	<description></description>
-  	<servlet-class>fr.afpa.web.BaseServlet</servlet-class>
+  	<servlet-class>fr.afpa.web.RegistServlet</servlet-class>
   </servlet>
   <servlet>
   	<servlet-name>Inscription</servlet-name>
@@ -19,8 +19,8 @@
   	<servlet-class>fr.afpa.controleur.conf.Inscription</servlet-class>
   </servlet>
   <servlet-mapping>
-  	<servlet-name>BaseServlet</servlet-name>
-  	<url-pattern>/BaseServlet</url-pattern>
+  	<servlet-name>RegistServlet</servlet-name>
+  	<url-pattern>/RegistServlet</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
   	<servlet-name>Inscription</servlet-name>
