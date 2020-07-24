@@ -6,6 +6,16 @@
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>index</title>
+<%
+	String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort()
+			+ request.getContextPath() + "/";
+
+	pageContext.setAttribute("basePath", basePath);
+%>
+
+<base href="<%=basePath%>">
+
+
 <link type="text/css" rel="stylesheet" href="static/css/style.css">
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
@@ -32,18 +42,17 @@
 					</button>
 					<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 						<div class="navbar-nav">
-							<a class="nav-item nav-link active" href="index.jsp">Home
-								<span class="sr-only">(current)</span></a> 
-							<a class="nav-item nav-link" href="pages/login.jsp">Login</a>
-							<a class="nav-item nav-link" href="pages/regist.jsp">Regist</a>
-							<a class="nav-item nav-link" href="pages/list.jsp">List</a>
-							<a class="nav-item nav-link" href="pages/manager.jsp">Gestion</a>
+							<a class="nav-item nav-link active" href="index.jsp">Home <span
+								class="sr-only">(current)</span></a> <a class="nav-item nav-link"
+								href="pages/login.jsp">Login</a> <a class="nav-item nav-link"
+								href="pages/regist.jsp">Regist</a> <a class="nav-item nav-link"
+								href="ChienServlet">List</a> 
 						</div>
 					</div>
 				</nav>
 			</div>
 		</div>
-		
+
 		<div class="row">
 			<div class="col-sm-2"></div>
 			<div class="col-sm-8">

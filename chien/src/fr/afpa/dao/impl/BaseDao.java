@@ -15,6 +15,13 @@ public abstract class BaseDao {
 
 	private QueryRunner queryRunner = new QueryRunner();
 
+	/**
+	 * update information from a sql request
+	 * 
+	 * @param sql
+	 * @param args
+	 * @return
+	 */
 	public int update(String sql, Object... args) {
 		Connection connection = JdbcUtils.getConnection();
 		try {
@@ -27,6 +34,15 @@ public abstract class BaseDao {
 		return -1;
 	}
 
+	/**
+	 * return an object according to sql sentence
+	 * 
+	 * @param <T>
+	 * @param type
+	 * @param sql
+	 * @param args
+	 * @return
+	 */
 	public <T> T queryForOne(Class<T> type, String sql, Object... args) {
 		Connection con = JdbcUtils.getConnection();
 		try {
@@ -39,6 +55,15 @@ public abstract class BaseDao {
 		return null;
 	}
 
+	/**
+	 * return a list of objects according to sql request
+	 * 
+	 * @param <T>
+	 * @param type
+	 * @param sql
+	 * @param args
+	 * @return
+	 */
 	public <T> List<T> queryForList(Class<T> type, String sql, Object... args) {
 		Connection con = JdbcUtils.getConnection();
 		try {
@@ -51,6 +76,13 @@ public abstract class BaseDao {
 		return null;
 	}
 
+	/**
+	 * return an object according to sql request
+	 * 
+	 * @param sql
+	 * @param args
+	 * @return
+	 */
 	public Object queryForSingleValue(String sql, Object... args) {
 
 		Connection conn = JdbcUtils.getConnection();
